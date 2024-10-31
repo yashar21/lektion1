@@ -133,4 +133,105 @@ const cities= ["göreborg","malmö","lund"];
 
 cities.unshift("stockholm")
 console.log(cities);
+
 ```
+shift tar bort det elementet som är först som pop men från början och inte slutet. 
+
+```js
+const cities= ["göreborg","malmö","lund"];
+cities.shift()
+console.log(cities);
+```
+includes(item)=> boolean.
+den chekar om det elementet finns i arreyen så retunerar den om det är sant eller falskt. 
+
+```js
+const numbers = [2,4,5,6,8,9];
+
+if(numbers.includes(5))
+{
+    console.log("number exist")
+}
+else{
+    console.log("number dosent exist")
+}
+
+```
+
+indexof=> return var den finns i arreyen eller om den inte existerar (-1)
+
+```js
+const numbers = [2,4,5,6,8,9];
+numers.indexOf(6);
+console.log();
+
+```
+
+
+Join()> det lägger till kommentar eller separar den i arrayn.
+const cities= ["göreborg","malmö","lund"];
+const citiesAsString=cities.join(".");
+console.log(cities);
+
+### splice(start) används inom mycket. man kan ha den i kombinerad med array om start är större eller mindre. 
+
+om vi inte vill ta bort något då skriver vi 
+splice(start,0);
+
+om vi ska ta bort : splice(start, deliteCount); då tar den bort från start. 
+splice(2, deliteCount); då tar den bort den andra. 
+
+while loop så länge codition stämmer den kommer köras och det är viktigt att updatera vikloret som styr. conditionen måste vara true om den e falls då körs inte koden. 
+
+## Do While loop
+
+lopen körs en gång oavsett om det e falsk eller true men om den är true då fortsätter den köra.
+```jd
+do {
+    
+} while ( condition);
+
+```
+
+## For-loop index
+for-loop är bra med array då vet vi hur många gånger vi ska lopa för den kommer att vara anpassad efter arrayen. 
+
+initialValue = "let caunt= 0; 
+
+```js
+for (initialValue; condition;change;)
+{
+
+}
+
+```
+
+Exemple
+```js
+
+const numbers = [2,5,8,6,9,23]
+
+for (let i = 0; numbers.length; i++);
+{
+    console.log(numbers[i]);
+}
+
+```
+Motsatsrikning: 
+````js
+
+const numbers = [2,5,8,6,9,23]
+
+for (let i = numbers.length -1 ; i>=0; i--);
+{
+    console.log(numbers[i]);
+}
+
+```
+
+
+
+
+
+
+
