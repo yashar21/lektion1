@@ -226,12 +226,74 @@ for (let i = numbers.length -1 ; i>=0; i--);
 {
     console.log(numbers[i]);
 }
+````
+
+```js
+for( varible of array ) {
+} // code to executed in each interaction.
+
+const cars = ["volvo" "bmw" "mercedes"]
+
+for ( const car of cars) {
+    console.log(car);
+}
 
 ```
 
 
+### FUNKIONER 
+
+en funktion kan bestå av en liten eller stor del av koder. om man upprepar en kod väldigt ofta då kan man göra den koden till en funktion och kalla den funktionen. Som en färdig recept. 
+
+det finns 3 sätt att skapa en funktion i javascript. 2 av de är väldigt lik men det 3e sättet är annarlunda. 
+
+
+## KOLLLA DOKOMENTET SOM LÄARERN HAR GJORT !!!!!!!!!!!!!!!!!
+
+SYNTAX
+
+```js
+function functionName(){
+    // code to executed.
+    return someting; 
+}
 
 
 
+```
+
+lets go första ssättet 
+
+```JS
+function greeting(){
+    console.log("hello There")
+} 
+man får "undefinded" och det är return värdet. utan retur värde kommer browsern skriva ut "undefinded"
 
 
+```
+
+andra sättet som är lik den första 
+```js
+const greeting = function()
+{
+    console.log("hello There")
+}
+
+
+```
+
+
+3e sättet arrow funtion
+
+```js 
+const gretting=() => {
+    console.log("hello There")
+}
+
+
+
+```
+
+BÄST ATT ANÄNDA ARROW och den första. 
+KOLLLA DOKOMENTET SOM LÄARERN HAR GJORT !!!!!!!!!!!!!!!!!

@@ -187,3 +187,7 @@
 // players.splice(3,1);
 // console.log(players);
 
+function greeting(){
+    console.log("hello There")
+}
+
