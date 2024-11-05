@@ -187,7 +187,22 @@
 // players.splice(3,1);
 // console.log(players);
 
-function greeting(){
-    console.log("hello There")
-}
+// function greeting(){
+//     console.log("hello There")
+// }
+
+
+// function greetingName(name){
+//     console.log("hello " + name + "!")
+// }
+
+// function addTwoNumbers(num1,num2){
+//     console.log(num1 + num2)
+// }
+
+// function addTwoNumbers(num1,num2){
+//     const answer= num1 +num2;
+//     console.log(`the answer is ${answer}`);
+// }
+
 

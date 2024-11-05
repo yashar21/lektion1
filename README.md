@@ -268,7 +268,9 @@ lets go första ssättet
 function greeting(){
     console.log("hello There")
 } 
-man får "undefinded" och det är return värdet. utan retur värde kommer browsern skriva ut "undefinded"
+man får "undefinded" och det är return värdet. utan retur värde kommer browsern skriva ut "undefinded" 
+
+" BÄSTA SÄTTET den hissas upp så den används i alla rader och inte efter där koden är "
 
 
 ```
@@ -297,3 +299,45 @@ const gretting=() => {
 
 BÄST ATT ANÄNDA ARROW och den första. 
 KOLLLA DOKOMENTET SOM LÄARERN HAR GJORT !!!!!!!!!!!!!!!!!
+
+## funiton med parametrar: 
+
+```js
+
+function greetingName(name){
+    console.log("hello" + name + "!")
+    //alvernative:
+    //console.log(`hello $name!`) DUBBELKOLLA DETTA SP DET ÄR RTÄTT
+}
+
+
+```
+
+
+egen ex
+```js
+function addTwoNumbers(num1,num2){
+    console.log(num1 + num2)
+}
+
+
+```
+
+```js
+function addTwoNumbers(num1,num2){
+    const answer= num1 +num2;
+    console.log(`the answer is ${answer}`);
+}
+
+
+
+```
+
+````js
+function divition(num1,num2){
+    const result = num1/num2;
+    return result;
+}
+const result = divide(10,2);
+```
+
