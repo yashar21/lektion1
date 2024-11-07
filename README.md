@@ -339,5 +339,285 @@ function divition(num1,num2){
     return result;
 }
 const result = divide(10,2);
+`````
+
+## uppgift 30:
+
+````js 
+let newStr: " ";
+for(const word of words){
+    newStr += word[0]
+}
+ console.log(newStr);
+
+
+
+````
+
+
+FUNTIONEN UPPFIGT 13 
+
+````js
+
+const vowels = ["a","e","i","o","u"];
+let count = 0;
+
+
+````
+objekt i programmering är egenskaper och metod är beteendet. alla bilar har samma egenkspaer ocj metoder alla har ljul och startar men de har olika värden att tex alla bilar tänds men vissa med nyckel vissa med knapp. samma egenskap samma metod men olika världen på egenskaperna. 
+
+# hur skapar man en objekt: 
+en objekt består av en variabel och en variabelnamn och vi tilldelar en "{}". Där efter kan vi till dela någon värde. 
+
+
+```JS
+const someObject = {} 
+
+````
+
+Det ovan är en tom objekt. Det är bäst att skapa en objekt med "Const".
+
+````JS
+const car = {
+    make = "volvo";
+    model: "V70";
+    year: 2016;
+    manualTransmission: true
+} 
+
+````
+
+Detta bilen presenterar en objekt. det har 4 egenskper. varje egenskap presenterar en information om den objekten. och den dana kan vara olija från string till siffror till boolian. 
+
+## costum metod.
+
+````JS
+
+
+const car = {
+    make = "volvo";
+    model: "V70";
+    year: 2016;
+    manualTransmission: true
+    start: funtion(){
+        console.log("the car is Start!");
+    }
+    changeGear: ()=>{
+        console.log("gear has beeen changed");
+    }
+} 
+
+````
+När en funtion kopplas till ett objekt det funktionen blir till metod. DVS metoder är funktioner. DVS om funktionen är för sig själv då är den funktion men kopplas den till en onjekt den funktionen blir till en metod. 
+
+
+## Vad är "THIS" scope: 
+
+Det är en nyckelord som refererar till en objkekt i javascript. var o hur man använder den så kan den användas på olika sätt. 
+
+* ensam this referrar till den globala window objekt. 
+* in "use Stict" - mode this would be undifined.
+* ** i en objekt ** this refererar till objekten själv. 
+* in i en funktion regeraer this till global objekt, unless it is created in another contentt.
+
+Detta ska vi kunna ::: 
+````js
+
+
+
+````
+
+```JS
+const car = {
+  make: "Volvo",
+  model: "V70",
+  year: 2016,
+  manualTransmission: true,
+  start: function () {
+    console.log("The car has started");
+  },
+};
+
+for (const key in car) {
+  console.log(key); // Will log the key.
+}
+
+````
+
+där det står key kan man skriva vad som och vad man än väljer att kalla det så presenterar (const key in car) "Key"  make,model, year och alla. 
+
+## Object.assign(targetObject,sorceObject)=> target object
+
+```JS
+const person= {
+name="niklas"
+age: 40;
+}
+
+const personDetileInfo={
+    last name = "anders"
+    occupation= "devoloper";
+}
+
+object.assign(person,personDetileInfo);
+console.log(person)
+console.log(personDetileInfo)
+
 ```
 
+past by reference betyder ??
+assaign betyder att slå ihopa 2 eller flera objekt. DVS targetObject,sorceObject,sorceObject,sorceObject,sorceObject. De sorcen kompliterar targetobjekten och skriver ut en hel objekt. 
+
+object.keys(object)=>array
+
+den tar alla keys och ger oss en array. 
+
+````JS
+const house= {
+    color:"green",
+    area:200,
+    adress= "rottningsgatan"
+    city= stockholm,
+}
+const keys = object.keys(house)
+console.log(keys)
+
+//objektvalue
+
+const keys = object.value(house)
+console.log(keys)
+
+````
+object.enteries kommer ge oss både value och keys i 2 olika rader. 
+
+object.freeze man låser objekten och man kan inte ändra den senare. DVS man kan inte radera eller lägga till nya ttribyter. 
+
+````js 
+const frozeenHouse = object.freeze(house)
+frozeenHouse.color=blue;
+frozeenHouse.windows=5;
+
+console.log(frozeenHouse)
+
+
+
+````
+object.sea man kan ite lägga till nya grejer eller ta bort som i freeze MEN man kan ändra på värderna som exixsterar. 
+
+om man har en bil car.color=red; och vill ändra den till gul det går. 
+
+Spreed syntax 
+man kopierar en objekt och ändra på den nya. om man ska ha 4 bialr med samma egenskaper men i olika färger så kan man kopiea den så
+````JS 
+ const car = {
+    make = "saab";
+    model=98;
+    color="geen";,
+
+ };
+ const newCar={};
+
+ console.log(car);
+ console.log(newCar);
+
+const anotherCar= {...car};
+
+
+
+````
+
+
+````js
+
+
+
+`````
+vad är en parameter? 
+## Array methods med callbacks. callbacks är en funtion när den används som parameter (då blir den callbacks).
+map(), filter(), reduce(), every(),
+
+alla dessa methoder execluterar en array. Callbacks körs efter varje intration. 
+
+map() innebär = den loppar igeenom en array och gör en edditering efter varje intration. den ger sedan en ny array med samma siffror med den nya modifieringen låt oss säga samma siffror plus 2+.
+
+````js
+const numbers[2,3,5,7,8,9];
+
+const numberDubbles= numbers.map( (number)=>){
+    return number * 2;
+}
+console.log(numberDubbles);
+
+
+`````
+
+exept number5 
+
+````js
+
+const numberDubblesNot5 = numbers.map((number)=> {
+    if (number===5){
+        return number;
+    }
+    
+    return number*2;
+});
+
+````` 
+
+## HUR MAN ANVÄNDER MAP()
+const volvo ={
+    make:"volvo",
+    model:"v60",
+    color:"green"
+};
+const MCD ={
+    make:"mcd",
+    model:"v60",
+    color:"green"
+};
+const BMW ={
+    make:"bmw",
+    model:"v60",
+    color:"green"
+};
+
+const cars=[volvo,MCD,BMW];
+
+const carsAllRed= cars.map((car)=> {
+    if (car.color==="red"){
+        return car;
+    }
+
+    return{...car,color:"red"};
+});
+
+console.log(cars);
+console.log(carsAllRed);
+
+
+
+FILTER ()
+
+
+detta filtrerar arreyen .callbacken kollar om arrayen är sant eller faskt och det som är faslkt kommer att suddas bort efter vaje intraktion. 
+
+````js
+const booleans= [0,1,0,1,0,1,0,1,1,1,0,1];
+const all0nes= numbers.filter((numbers)=>{
+    if (numbers===0){
+        return false;
+    }
+    return true;
+})
+
+
+`````
+ta bort kod blocken 
+````js
+
+const booleans= [0,1,0,1,0,1,0,1,1,1,0,1];
+const all0nes= numbers.filter((numbers)=>const boolean= number!===0);
+
+
+`````

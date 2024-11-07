@@ -187,6 +187,51 @@
 // players.splice(3,1);
 // console.log(players);
 
+// uppfigt 16 
+
+// const playersV2= ["R","E","F","G","H","Q","W"]
+
+// const shortListOfPlayers= playersV2.slice(0,3);
+// console.log(shortListOfPlayers);
+// // man kopierar fram tills slutindex positiotnen med +1. läs läarerns 
+
+// // #17 
+
+// const anotherShortListOfPlayers = playersV2.slice(2)
+// console.log("#17", anotherShortListOfPlayers);
+// console.log("#17", playersV2);
+
+
+// // #18
+
+// const returnValue= playersV2.With(1,"mbape");
+// console.log("#18",playersV2);
+// console.log("#18",returnValue);
+
+
+
+
+
+
+
+
+// #31  ALLLT BLEV FEL KOLLA LÄLARENS 
+
+// const anOtherNumbers= [5,6,20,4,8];
+// const index=0;
+// let sum=0;
+
+// while(){
+//     const number=anOtherNumbers= [5,6,20,4,8];
+//     console.log(anOtherNumbers[index])
+//     sum += anOtherNumbers
+//     i++;
+// }
+
+
+
+// FUNKRIONER 
+
 // function greeting(){
 //     console.log("hello There")
 // }
@@ -205,4 +250,66 @@
 //     console.log(`the answer is ${answer}`);
 // }
 
+// const numbers = [2,3,5,7,8,9];
 
+// const numberDubbles= numbers.map( (number)=> 
+// {
+//     return number * 2;
+// }
+// )
+// console.log(numberDubbles);
+
+
+// const numberDubblesNot5 = numbers.map((number)=> {
+//     if (number===5){
+//         return number;
+//     }
+    
+//     return number*2;
+// });
+
+// const volvo ={
+//     make:"volvo",
+//     model:"v60",
+//     color:"green"
+// };
+// const MCD ={
+//     make:"mcd",
+//     model:"v60",
+//     color:"green"
+// };
+// const BMW ={
+//     make:"bmw",
+//     model:"v60",
+//     color:"green"
+// };
+
+// const cars=[volvo,MCD,BMW];
+
+// const carsAllRed= cars.map((car)=> {
+//     if (car.color ==="red"){
+//         return car;
+//     }
+
+//     return{...car,color:"red"};
+// });
+
+// console.log(cars);
+// console.log(carsAllRed);
+
+
+// const numbers= [0,1,0,1,0,1,0,1,1,1,0,1];
+const booleans= [0,1,0,1,0,1,0,1,1,1,0,1];
+const all0nes= numbers.filter((numbers)=> number!==0);
+
+// const all0nes= numbers.filter((numbers)=>{
+//     if (numbers===0){
+//         return false;
+//     }
+//     return true;
+// });
+// console.log(all0nes);
+
+
+
+objekt
