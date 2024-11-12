@@ -299,8 +299,8 @@
 
 
 // const numbers= [0,1,0,1,0,1,0,1,1,1,0,1];
-const booleans= [0,1,0,1,0,1,0,1,1,1,0,1];
-const all0nes= numbers.filter((numbers)=> number!==0);
+//const booleans= [0,1,0,1,0,1,0,1,1,1,0,1];
+//const all0nes= numbers.filter((numbers)=> number!==0);
 
 // const all0nes= numbers.filter((numbers)=>{
 //     if (numbers===0){
@@ -310,6 +310,8 @@ const all0nes= numbers.filter((numbers)=> number!==0);
 // });
 // console.log(all0nes);
 
+const articleEl= document.createElement("article");
+
+console.log(articleEl)
 
 
-objekt

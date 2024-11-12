@@ -621,3 +621,130 @@ const all0nes= numbers.filter((numbers)=>const boolean= number!===0);
 
 
 `````
+
+--------------------------------------------
+
+````html
+
+
+
+````
+
+# HTML CSS och JAVA
+
+```html
+<div id="20" class="some-class"  > HERE is some content of the html element. This can be just text content or child element.</div>
+
+
+````
+
+key point:
+
+<div></div> : har start och slut tag. 
+<div>content</div>: the content inside html can be a text or elements on other words child elements.
+id & class: är exemple på attributer man kan lägga till på element. 
+
+semantics: vilka element man ska anävnda vid vilken tillfälle. tex man gör en nav istället för div för i nav navigerar man på sidan och då väljer man det istället för div. 
+
+Allt som ska synas på sidan ska vara på BODY
+
+aside kan man svända om man ksa ha en sido meny. 
+
+2 av 130 elements är inte semantics och de 2 är div och span. 
+
+
+
+## CSS
+
+syntax: 
+
+selector: ex h1. det är en element som man vill lägga till styling.  
+
+declaration: {color:black;font-size:12px;}
+En kollition där vi beskriver hur den targetatde selectorn ska stylas.
+
+proprety-value: en specefik egenskap och värde som target elementet ska ha. 
+
+
+margin påverkat utanför boxen. 
+
+padding trycker in texten in i boxen. 
+
+
+boxmodell:
+
+content är i html tags.
+padding: är en transparant area mellan border och content. vi kan vändra på den area .
+Border: markesas slutet av boxen.
+margin: den är transparant utanför boxen den kan användas att putta andra contet ifrån varandra.
+ 
+
+
+ ## CSS specificety
+
+ deet är ett verktyg som browser använder om vilken syling som ska appliceras. 
+
+
+````css
+div{
+    backgrund-color:yellow;
+    margin-bottom:1rem;
+}
+
+div{
+    backgrund-color:blue;
+}
+
+````
+koden läses uppifrån ner och därför överskrivs yellow till blå. 
+
+en class väger mer dvs har mer specificety
+därför blir den beskrivningen i class mer prioroterad. det finns 3 nivåer av prio. 0.0.0. div har 0.0.1. class har 0.1.0. och id har 1.0.0. 
+
+deras kombination dvs div.box-class då blir det 0.1.1. och detta över skrivs och blir mer piro. 
+
+
+när är det mellan "div. box-class" då väljer man att inte hela diven med den klassen ska få alla egenskaper utan bara just den specefika klassen. diven kan ha 3 klasser o man kanske vill att ena klassen ska få de egerskaepen. 
+
+
+
+# DOM
+## dokument objekt modell
+
+1. dokument
+
+2. Node:  hmtl element, text, comment, attribyter(class,id,src osv )
+
+3. Element 
+representerar en html element.
+
+4.attibyet:
+<div id="exemple"> id är en node attribyte.
+
+
+5. text
+
+
+# create HTML element:
+
+dockument.createElement(type)=> html element
+
+parametern " type " är vad det är vi vill skapa och det kan vara div,article,span osv.
+
+````js
+const articleEl= document.createElement("articleEL");
+
+console.log(articleEl)
+
+````
+
+Detta skapare en element men man ser inte det i DOM. 
+
+Appending to DOM 
+
+appendChild: 
+
+
+
+
+
