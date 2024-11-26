@@ -746,5 +746,315 @@ appendChild:
 
 
 
+create refenreser:
+querySelector(CSS selector)=> HTML element | null . den kollar om det man söker edfter finns eller null.  sök alltid efter classen för då får man rätt fakta. Det funkar för vi har en klass som heter så. 
+
+här ledar vi efter header :
+
+```js
+const header = document.querySelector(".header");
+
+console.log(header);
+
+````
+
+nu söker vi efter a tag: 
 
 
+````js 
+
+const aContant= document.querySelector("a");
+
+console.log(aContact);
+
+
+````
+på det viset så får vi inte aContact utan aHome för det är den första a tagen. men om vi söker efter classen = .Contact iställer för a då får vi contant på console.log(aContact);
+````js 
+
+const aContant= document.querySelector("a.contact");
+
+console.log(aContact);
+`````
+
+querySelectorAll: 
+
+
+````js 
+
+const aContant= document.querySelectorAll("a");
+
+console.log(aContact);
+
+````
+
+Här får vi en nodelist som matchar med selectorn och det skriver ut alla a tag.det ser ut som array men den är inte det.
+
+
+lopa a tagen:
+
+
+````js
+const aTag= document.querySelectorAll("a");
+for (const a of aTags){
+    console.log(a)
+}
+
+````
+
+````js
+const aTag= document.querySelectorAll("a");
+aTags.forEach(a){
+    console.log(a)
+};
+
+kolla din telefon bilden.
+````
+
+
+MANIPULATION
+
+style: 
+skillnaden mellan style och stylesheet(CSS) 
+för att ändra från java i css 
+````js 
+const header = document.querySelector(".header");
+header.style.backgrundColor="green";
+header.style.color="pruple";
+
+
+````
+
+
+classList
+
+```js 
+const header = document.querySelector(".header");
+
+header.classList.add("brown","container");
+
+
+```
+
+
+
+
+
+
+DOM innebär att man anväder js och ändrar i html och i CSS
+
+
+ClassList: är en attrebyt som har en array liknande värde. den lagrar alla classer man har skapat . Det är en DOMTokenList. 
+
+viktiga metoder som tillhör classList. det är add(), containes() och remove(). 
+
+Allt som har ljusblå i min html är attrebyt. 
+
+getAtrribute()
+ hämtar attibuteens värde. tex om det är en bild så kan man ta fram vad det står att bilen är. 
+
+setAttribute(attribute,newValue)=> void.
+man uppdaterar värdet. man väljer attributet man vill ändra och sedan nya informationen. 
+
+```JS
+imge.setAttribute("alt""just a regular santa");
+
+const altText = imge.getAttribute("alt");
+console.log("alt", altText);
+
+````
+
+inserAdjecentElement(position,element)
+vi måste ha parent elment alltid. 
+
+kolla vf beforebegin och afterbegin ger en
+
+innerHTML
+
+vi tilllåter att skriva html när vi använder den taggen. det kan vara från en stirng till html syntax man kan skriva. 
+
+skapa innerhtml: detta nedan är inte använtbart.
+````js 
+const articleAsAString= "<article> this is an article";
+console.log(articleAsAString);
+
+````
+Låt oss skrtiva i main.
+
+````js 
+const articleAsAString= "<article> this is an article";
+const main = document.querySelector("main");
+main.innerHtml=articleAsAString;
+console.log(articleAsAString);
+
+````
+detta ovan översrkiver hela main och man ksa vara försikt när man använder den. 
+
+men om man lägger till + då plussar den main och den nya innerHTML main och ger oss den nya html tillägen. 
+````js 
+const articleAsAString= "<article> this is an article";
+const main = document.querySelector("main");
+// main.innerHtml=articleAsAString;
+main.innerHtml+=articleAsAString;
+console.log(articleAsAString);
+
+````
+
+
+missat 1,5 dag. 
+
+
+är på lektion 21 nov. 
+
+Event triggas igång hela tiden. Finns click,input, event. 
+
+finns 3 sätt att skapa event. 
+
+## submit 
+Submit event används med en form-tag
+
+
+## BOM
+
+är en objekt. browser object model. 
+
+för att komma åt BOM använder vi en global variable Wimdow. 
+
+vi kan använda den både som implicit och explicit. 
+
+```js
+window.alert("hello"); explicit.
+````
+
+
+```js
+alert("helllo");     Imolicit 
+````
+
+
+Bom
+...
+
+
+## Local storage
+
+localStorege är en del av BOM och används för att lagra data i använderens webbläsare på ett enkelt sätt.
+
+vad är localStorege? 
+localStorege är en nykel-värde...
+
+
+Grundläggande metoder
+
+localStorege har enkla metoder för att sättta,läsa,uppdatera och ta bort data. 
+
+1. spara data : setItem(key,value)
+
+```js
+const username="niklas";
+const userAge=27;
+const isAwsome= true;
+localStorage.setItem("username",username);
+localStorage.setItem("userAge",serAge);
+localStorage.setItem("isAwsome",isAwsome);
+
+````
+
+2. hämta data: getItem(key)
+```js
+
+const username= localStorage.getItem("username");
+const content=document.querySelector(".content");
+
+const usernameHTML= `<p>${username}</p>`;
+content.insertAdjacentHTML("afterbegin",usernameHTML);
+
+```
+
+3. ta bort en nyckel: removeItem(key)
+localStorage.revomeItem("isAwsome"); 
+finns det ett värde som kan hämtas via den nyckeln så kommer den att tas bort för evigt. finns det inte så händer det inget. 
+
+4. Rensa allt : clear()
+
+5. kontrollera alla objekt: length
+
+
+Spara komplexa objekt med JSON.
+eftersom localStorage endsat stöder stänger ,åste objekt seriaerlisas innan den sparas för att göra det det finns 2 metoder. 
+
+JSON.stringify()- konventerar objekt till en sträng.
+
+JSON.parse()- konventerar tillbaka stängen till den ursprungliga. 
+
+Detta nedan kan inte sparas av browser för den behöver konventeras. den kan man inte spara och hämta. 
+
+```js 
+const user = {
+    name: niklas;
+    age: 27;
+    isAwsome: ture;
+}
+
+localStorage.setItem("user", user);
+
+```
+rätt sätt 
+man sätter in JSON.stringify(). 
+
+```js 
+
+localStorage.setItem("user", JSON.stringify(user);
+
+```
+
+
+samman sättnnnig med Parse()
+
+```js 
+const user = {
+    name: niklas;
+    age: 27;
+    isAwsome: ture;
+}
+
+localStorage.setItem("user", JSON.stringify(user));
+const userFormLS= localStorage.getItem("user");
+console.log(JSON.parse(userFormLS));
+
+```
+
+vanliga användningsområden
+
+1. spara användarinstälnningar 
+* temafärger 
+* språkval
+* visningsåreferens ( listvy eller rutnätsvy)
+
+2. session och snvändardata
+* exemplevis ett användarnamn eller en annan information så länge det inte är känslig information. 
+
+3. formulärvärden
+* om en användare stänger och öppnar sidan igen kan deras ifyllda formmulärfält finnas kvar. 
+
+4. enkel caching. spara restultatet från ett API-anrop som inte behöver anrosap så ofta. 
+
+## säkerhet
+
+localStorage är inte säker ställe. man ska inte lagra känsliga information där. som lösenord.
+
+
+begränsningar i localStorage: 
+endast stränger kan sparas där för behöver man konventera det genom JSON.stringify() och JSON.parse(). 
+
+begränsning i storleken 5-10 mb kan tillåtas att lagas. 
+
+same origin policy. man kan inte överföra information från oiliak doman. 
+
+## WEB API:
+
+FINNS MASSOR AV API. mozzila.org hemidan 
+history api är för att man ska kunna gå fram och tillbaka på webben. 
+
+
+det är en gränssnitt mellan din kod (JAVASCRIP) och weebläsarens egna funktioner 
