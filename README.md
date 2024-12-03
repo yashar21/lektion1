@@ -1058,3 +1058,32 @@ history api är för att man ska kunna gå fram och tillbaka på webben.
 
 
 det är en gränssnitt mellan din kod (JAVASCRIP) och weebläsarens egna funktioner 
+
+
+
+
+## API JSON 
+
+Vad är json? en data format. 
+står för Javascript objekt notation och är en lättläst format av representea data. 
+
+Strucktur: Json står av nyckel-värde par och är väldigt likt javascript men används för att skicak data mellan olika system.
+
+
+
+
+````js
+{
+    "name":"John Doe",
+    "age":38,
+    "email":"y.m@live.se",
+    "skills":"js","HTML","CSS"
+}
+
+
+````
+
+
+Varför JSON? 
+lätt att läsa 
+Json fungerar oavsett vilket program som körs. 
